@@ -37,4 +37,4 @@ jobs:
         run: ls -la build
 
       - name: Use
-        run: cat build/output.txt
+        run: cat output.txt
