@@ -11,6 +11,6 @@ runs:
   using: 'composite'
   steps:
     - name: 'Run Python Script'
-      shell: 'python'
+      shell: 'bash'  
       run: |
         python main1.py "${{ inputs.message }}"
