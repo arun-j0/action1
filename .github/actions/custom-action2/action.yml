@@ -1,0 +1,23 @@
+name: "A custom action for greeting"
+
+description: "Prints Greeting message when first name and last name is given"
+
+inputs:
+  first_name:
+    description: "First name of the user"
+    required: true
+
+  last_name:
+    description: "Last name of the user"
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - name: "Run"
+      shell: 'bash'
+      run: |
+       python main2.py ${inputs.firstname} ${{inputs.lastname}}
+
+
+     
