@@ -1,0 +1,19 @@
+name: Dependent jobs
+
+on: workflow_dispatch
+
+jobs:
+ 
+ build:
+  runs-on: ubuntu-latest
+  steps:
+   - uses: actions/checkout@v3
+
+   - name: Runs one line Script
+     run: echo "Hellooo"
+
+   - name: Runs Multiline script
+     run: |
+      echo "Helloooo"
+      echo "Hello Im multilined"
+
