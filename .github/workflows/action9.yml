@@ -33,8 +33,5 @@ jobs:
         with:
           name: build-artifacts
 
-      - name: List downloaded files
-        run: ls -la build
-
       - name: Use
         run: cat output.txt
