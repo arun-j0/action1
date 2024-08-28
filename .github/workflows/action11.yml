@@ -13,5 +13,5 @@ jobs:
             - name: RUN
               uses: ./.github/actions/custom-action2
               with:
-               first-name: "Arun"
-               last-name: "Kumar"
+               first_name: "Arun"
+               last_name: "Kumar"
