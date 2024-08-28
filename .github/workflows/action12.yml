@@ -1,0 +1,19 @@
+name: "Custom Addtion action"
+
+on: workflow_dispatch
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+
+        steps:
+           - name: Checkout
+             uses: actions/checkout@v3
+
+
+           - name: RUN
+             uses: ./.github/custom-action3
+             with:
+                num1 : "10"
+                num2 : "20"
+

@@ -1,0 +1,19 @@
+name: "Custom action for two numbers additon"
+description: "Adds two numbber from the workfow"
+
+inputs:
+  num1:
+    description: "First number"
+    required: true
+
+  num2:
+    description: "Second number"
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - name: "Run"
+      shell: 'bash'
+      run: |
+        python main3.py ${{inputs.num1}} ${{inputs.num2}}
