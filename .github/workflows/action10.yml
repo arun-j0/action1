@@ -3,14 +3,14 @@ name: Custom Python Action Workflow
 on: [push]
 
 jobs:
-    test:
-        runs-on: ubuntu-latest
+  test:
+    runs-on: ubuntu-latest
 
-        steps:
-         - name: checkout
-           uses: actions/checkout@v3
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
 
-         - name: Run 
-           uses: ./.github/actions/custom-action
-           with:
-            message: "Hello from workflow"
+      - name: Run Custom Python Action
+        uses: ./.github/actions/custom-action
+        with:
+          message: "Hello from workflow"
