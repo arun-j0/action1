@@ -12,7 +12,7 @@ jobs:
 
 
            - name: RUN
-             uses: ./.github/custom-action3
+             uses: ./.github/actions/custom-action3
              with:
                 num1 : "10"
                 num2 : "20"
