@@ -1,0 +1,12 @@
+name: Checkout Action
+
+on: [push]
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: checkout usage
+              uses: checkout/actions@v3
+              
