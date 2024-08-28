@@ -17,7 +17,6 @@ runs:
     - name: "Run"
       shell: 'bash'
       run: |
-       python main2.py ${inputs.first_name} ${{inputs.last_name}}
+       python main2.py ${{inputs.first_name}} ${{inputs.last_name}}
 
 
-     
