@@ -1,0 +1,16 @@
+name: Workflow Variables
+
+on: workflow_dispatch
+
+env:
+    w-var: "I AM WORKFLOW VARIABLE"
+
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Testing Workflow variable
+              run: echo "Tested:${{env.w-var}}"
+        
