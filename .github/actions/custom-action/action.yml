@@ -1,0 +1,16 @@
+name: 'Custom Python Action'
+description: 'A custom action to print a message'
+
+inputs:
+  message:
+    description: 'Message to print'
+    required: true
+    default: 'Hello World(default)'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: 'Run Python Script'
+      shell: 'python'
+      run: |
+        python main1.py "${{ inputs.message }}"
