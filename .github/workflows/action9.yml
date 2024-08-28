@@ -30,7 +30,9 @@ jobs:
               uses: actions/download-artifact@v3
               with:
                 name: build-artifacts
+                path: ./  # Download to the current directory
 
             - name: Use
-              run: cat build/output.txt
-
+              run: |
+                ls -R  # List all files and directories to verify the path
+                cat build/output.txt  # Print the contents of the file
