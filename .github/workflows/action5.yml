@@ -1,0 +1,22 @@
+name: Contexts in Workflow variables
+
+on: workflow_dispatch
+
+env:
+    NAME: ${{github.actor}}
+    ACTION_NAME: ${{github.event_name}}
+    REPO: ${{github.repository}}
+    OWNER: ${{github.repository_owner}}
+
+
+jobs:
+    build:
+
+         runs-on: ubuntu-latest
+         steps:
+         - name: Printing Contexts using variables
+           run: |
+            echo "${{env.NAME}}"
+            echo "${{env.ACTION_NAME}}"
+            echo "${{env.REPO}}"
+            echo "${{env.OWNER}}"
